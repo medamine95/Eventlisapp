@@ -14,6 +14,7 @@
 		FA80431A249A2D2B00D85108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA804319249A2D2B00D85108 /* Assets.xcassets */; };
 		FA80431D249A2D2B00D85108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA80431B249A2D2B00D85108 /* LaunchScreen.storyboard */; };
 		FA804325249A2FF600D85108 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804324249A2FF600D85108 /* AppCoordinator.swift */; };
+		FA804327249A39DB00D85108 /* EventListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804326249A39DB00D85108 /* EventListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FA80431C249A2D2B00D85108 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA80431E249A2D2B00D85108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA804324249A2FF600D85108 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FA804326249A39DB00D85108 /* EventListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				FA80431B249A2D2B00D85108 /* LaunchScreen.storyboard */,
 				FA80431E249A2D2B00D85108 /* Info.plist */,
 				FA804324249A2FF600D85108 /* AppCoordinator.swift */,
+				FA804326249A39DB00D85108 /* EventListCoordinator.swift */,
 			);
 			path = Eventlisapp;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				FA804315249A2D2600D85108 /* ViewController.swift in Sources */,
 				FA804311249A2D2600D85108 /* AppDelegate.swift in Sources */,
 				FA804313249A2D2600D85108 /* SceneDelegate.swift in Sources */,
+				FA804327249A39DB00D85108 /* EventListCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
