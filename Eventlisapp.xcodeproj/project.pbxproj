@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1029DC24C1A1D000672DB3 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1029DB24C1A1D000672DB3 /* EventListViewController.swift */; };
+		FA1029DE24C1A5C700672DB3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1029DD24C1A5C700672DB3 /* Colors.swift */; };
 		FA804311249A2D2600D85108 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804310249A2D2600D85108 /* AppDelegate.swift */; };
 		FA804313249A2D2600D85108 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804312249A2D2600D85108 /* SceneDelegate.swift */; };
 		FA804315249A2D2600D85108 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804314249A2D2600D85108 /* ViewController.swift */; };
@@ -15,9 +17,13 @@
 		FA80431D249A2D2B00D85108 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA80431B249A2D2B00D85108 /* LaunchScreen.storyboard */; };
 		FA804325249A2FF600D85108 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804324249A2FF600D85108 /* AppCoordinator.swift */; };
 		FA804327249A39DB00D85108 /* EventListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804326249A39DB00D85108 /* EventListCoordinator.swift */; };
+		FAA0E9E424C1AF20004EF1FF /* EventsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0E9E224C1AF20004EF1FF /* EventsApp.xcdatamodeld */; };
+		FAA0E9E624C1AFC2004EF1FF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0E9E524C1AFC2004EF1FF /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA1029DB24C1A1D000672DB3 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		FA1029DD24C1A5C700672DB3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FA80430D249A2D2600D85108 /* Eventlisapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventlisapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA804310249A2D2600D85108 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA804312249A2D2600D85108 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +34,8 @@
 		FA80431E249A2D2B00D85108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA804324249A2FF600D85108 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FA804326249A39DB00D85108 /* EventListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCoordinator.swift; sourceTree = "<group>"; };
+		FAA0E9E324C1AF20004EF1FF /* EventsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventsApp.xcdatamodel; sourceTree = "<group>"; };
+		FAA0E9E524C1AFC2004EF1FF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,9 @@
 		FA80430F249A2D2600D85108 /* Eventlisapp */ = {
 			isa = PBXGroup;
 			children = (
+				FAA0E9E124C1AEB6004EF1FF /* Coordinators */,
+				FAA0E9DF24C1AE91004EF1FF /* Extensions */,
+				FAA0E9E024C1AEA2004EF1FF /* Controllers */,
 				FA804310249A2D2600D85108 /* AppDelegate.swift */,
 				FA804312249A2D2600D85108 /* SceneDelegate.swift */,
 				FA804314249A2D2600D85108 /* ViewController.swift */,
@@ -67,10 +78,35 @@
 				FA804319249A2D2B00D85108 /* Assets.xcassets */,
 				FA80431B249A2D2B00D85108 /* LaunchScreen.storyboard */,
 				FA80431E249A2D2B00D85108 /* Info.plist */,
+				FAA0E9E224C1AF20004EF1FF /* EventsApp.xcdatamodeld */,
+				FAA0E9E524C1AFC2004EF1FF /* CoreDataManager.swift */,
+			);
+			path = Eventlisapp;
+			sourceTree = "<group>";
+		};
+		FAA0E9DF24C1AE91004EF1FF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA1029DD24C1A5C700672DB3 /* Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAA0E9E024C1AEA2004EF1FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA1029DB24C1A1D000672DB3 /* EventListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAA0E9E124C1AEB6004EF1FF /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
 				FA804324249A2FF600D85108 /* AppCoordinator.swift */,
 				FA804326249A39DB00D85108 /* EventListCoordinator.swift */,
 			);
-			path = Eventlisapp;
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +181,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA804325249A2FF600D85108 /* AppCoordinator.swift in Sources */,
+				FA1029DC24C1A1D000672DB3 /* EventListViewController.swift in Sources */,
 				FA804315249A2D2600D85108 /* ViewController.swift in Sources */,
+				FA1029DE24C1A5C700672DB3 /* Colors.swift in Sources */,
+				FAA0E9E424C1AF20004EF1FF /* EventsApp.xcdatamodeld in Sources */,
 				FA804311249A2D2600D85108 /* AppDelegate.swift in Sources */,
+				FAA0E9E624C1AFC2004EF1FF /* CoreDataManager.swift in Sources */,
 				FA804313249A2D2600D85108 /* SceneDelegate.swift in Sources */,
 				FA804327249A39DB00D85108 /* EventListCoordinator.swift in Sources */,
 			);
@@ -346,6 +386,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAA0E9E224C1AF20004EF1FF /* EventsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAA0E9E324C1AF20004EF1FF /* EventsApp.xcdatamodel */,
+			);
+			currentVersion = FAA0E9E324C1AF20004EF1FF /* EventsApp.xcdatamodel */;
+			path = EventsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA804305249A2D2600D85108 /* Project object */;
 }
