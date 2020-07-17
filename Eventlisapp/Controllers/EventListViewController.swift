@@ -13,11 +13,9 @@ class EventListViewController: UIViewController {
     
     private let coreDataManager = CoreDataManager()
     
-    static  func instantiate()-> EventListViewController{
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let controller = storyboard.instantiateViewController(identifier: "EventListViewController") as! EventListViewController
-        return controller
-    }
+    var viewModel:EventListViewModel!
+    
+
     //MARK: - LifeCycle
 
     override func viewDidLoad() {
@@ -31,18 +29,15 @@ class EventListViewController: UIViewController {
         
     func setupUI()  {
         let plusimage = UIImage(systemName: "plus.circle.fill")
-        let barButtonItem = UIBarButtonItem(image: plusimage, style: .plain, target: self, action: #selector(tappedRightBarButton))
+        let barButtonItem = UIBarButtonItem(image: plusimage, style: .plain, target: self, action: #selector(tappedAddEventButton))
         barButtonItem.tintColor = .primary
         navigationItem.rightBarButtonItem = barButtonItem
         navigationItem.title = "Events"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    @objc private func tappedRightBarButton(){
-        print("tapped")
+    @objc private func tappedAddEventButton(){
+        viewModel.tappedAddEvent()
     }
-    
-
- 
-
+   
 }

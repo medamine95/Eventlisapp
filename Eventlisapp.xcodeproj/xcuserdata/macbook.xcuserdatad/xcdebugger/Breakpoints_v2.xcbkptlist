@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7A6FFBC4-6335-4F3B-9C04-3C56641E7BF4"
+            uuid = "D8EB8300-B589-4C89-B8DD-FE6434113D1D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Eventlisapp/Controllers/EventListViewController.swift"
+            filePath = "Eventlisapp/Coordinators/EventListCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "childDidFinsih(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

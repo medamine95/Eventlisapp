@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-protocol Coordinator {
+protocol Coordinator: class {
     var childCoordinators:[Coordinator] {get}
     func start()
+    
 }
 
 final class Appcoordinator:Coordinator{
