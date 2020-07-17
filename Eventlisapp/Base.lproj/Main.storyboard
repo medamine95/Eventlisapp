@@ -29,9 +29,24 @@
                     <view key="view" contentMode="scaleToFill" id="0Ow-b1-je1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dho-pL-Sp8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LSR-Tl-gqj" firstAttribute="trailing" secondItem="Dho-pL-Sp8" secondAttribute="trailing" id="JJP-9u-hLJ"/>
+                            <constraint firstItem="Dho-pL-Sp8" firstAttribute="top" secondItem="LSR-Tl-gqj" secondAttribute="top" id="Mqo-m3-brq"/>
+                            <constraint firstItem="Dho-pL-Sp8" firstAttribute="leading" secondItem="LSR-Tl-gqj" secondAttribute="leading" id="lqA-f9-ned"/>
+                            <constraint firstItem="LSR-Tl-gqj" firstAttribute="bottom" secondItem="Dho-pL-Sp8" secondAttribute="bottom" id="p59-6e-TsZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LSR-Tl-gqj"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Dho-pL-Sp8" id="ad9-rB-s9f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4K-Cf-siV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

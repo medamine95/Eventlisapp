@@ -24,7 +24,6 @@ final class AddEventCoordinator:Coordinator{
         addEventViewController.viewModel = addEventViewModel
         navigationController.present(addEventViewController, animated: true, completion: nil)
         addEventViewController.view.backgroundColor = .orange
-
     }
     func didFinsihAddEvent(){
         parentCoordinator?.childDidFinsih(self)
