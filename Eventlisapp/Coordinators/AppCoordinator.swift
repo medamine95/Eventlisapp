@@ -16,7 +16,7 @@ protocol Coordinator: class {
 }
 
 final class Appcoordinator:Coordinator{
-   private(set) var childCoordinators: [Coordinator] = []
+    private(set) var childCoordinators: [Coordinator] = []
     
     private let window:UIWindow
     
@@ -34,7 +34,5 @@ final class Appcoordinator:Coordinator{
         window.makeKeyAndVisible()
         
     }
-    
-    
-    
+  
 }

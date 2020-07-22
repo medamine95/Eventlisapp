@@ -47,6 +47,9 @@ final class TitleSubtitleCell:UITableViewCell{
         subtitleTextField.inputAccessoryView = viewModel.type == .text ? nil:toolbar
         photoImageView.isHidden = viewModel.type != .image
         subtitleTextField.isHidden = viewModel.type == .image
+        
+        photoImageView.image = viewModel.image
+        
         verticalStackView.spacing = viewModel.type == .image ? 15 : verticalStackView.spacing    }
     
     private func setupViews(){
@@ -80,7 +83,7 @@ final class TitleSubtitleCell:UITableViewCell{
     @objc private func tappedDone(){
         ///date update
         ///tableview relaodcell
-      //  guard let date =  else {return false}
+        //  guard let date =  else {return false}
         viewModel?.update(datePickerView.date)
         print("tappedDone")
     }

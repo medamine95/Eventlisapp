@@ -27,7 +27,8 @@ final class TitleSubtitleCellViewModel{
         return dateFormatter
     }()
     
-    /// callback
+    private(set) var image:UIImage?
+   /// callback
     
     private(set) var onCellUpdate: () -> Void = {}
     
@@ -39,6 +40,8 @@ final class TitleSubtitleCellViewModel{
         self.onCellUpdate = onCellUpdate
     }
     
+    ///Overloading Concept below
+    
     func update(_ subtitle:String){
         self.subtitle = subtitle
     }
@@ -48,5 +51,9 @@ final class TitleSubtitleCellViewModel{
         self.subtitle = dateString
         onCellUpdate()
         //reload cell
+    }
+    func update(_ image:UIImage){
+       self.image = image
+        onCellUpdate()
     }
 }

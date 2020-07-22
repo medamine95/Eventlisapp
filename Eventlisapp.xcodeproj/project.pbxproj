@@ -26,6 +26,7 @@
 		FA8E29D824C1E70A009CEF21 /* TitleSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E29D724C1E70A009CEF21 /* TitleSubtitleCell.swift */; };
 		FAA0E9E424C1AF20004EF1FF /* EventsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0E9E224C1AF20004EF1FF /* EventsApp.xcdatamodeld */; };
 		FAA0E9E624C1AFC2004EF1FF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0E9E524C1AFC2004EF1FF /* CoreDataManager.swift */; };
+		FAD3FEF224C7340C008008EC /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3FEF124C7340C008008EC /* ImagePickerCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		FA8E29D724C1E70A009CEF21 /* TitleSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCell.swift; sourceTree = "<group>"; };
 		FAA0E9E324C1AF20004EF1FF /* EventsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventsApp.xcdatamodel; sourceTree = "<group>"; };
 		FAA0E9E524C1AFC2004EF1FF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		FAD3FEF124C7340C008008EC /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				FA804324249A2FF600D85108 /* AppCoordinator.swift */,
 				FA804326249A39DB00D85108 /* EventListCoordinator.swift */,
 				FA8E29CC24C1CD10009CEF21 /* AddEventCoordinator.swift */,
+				FAD3FEF124C7340C008008EC /* ImagePickerCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				FA804315249A2D2600D85108 /* ViewController.swift in Sources */,
 				FA1029DE24C1A5C700672DB3 /* Colors.swift in Sources */,
 				FAA0E9E424C1AF20004EF1FF /* EventsApp.xcdatamodeld in Sources */,
+				FAD3FEF224C7340C008008EC /* ImagePickerCoordinator.swift in Sources */,
 				FA804311249A2D2600D85108 /* AppDelegate.swift in Sources */,
 				FAA0E9E624C1AFC2004EF1FF /* CoreDataManager.swift in Sources */,
 				FA8E29CB24C1C531009CEF21 /* EventListViewModel.swift in Sources */,
