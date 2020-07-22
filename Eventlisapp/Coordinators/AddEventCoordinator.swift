@@ -25,7 +25,7 @@ final class AddEventCoordinator:Coordinator{
         self.modalNavigationController = UINavigationController()
         let addEventViewController:AddEventViewController = .instantiate()
         modalNavigationController?.setViewControllers([addEventViewController], animated: false)
-        let addEventViewModel = AddEventViewModel()
+        let addEventViewModel = AddEventViewModel(cellBuilder: EventsCellBuilder(), coreDataManager: CoreDataManager())
         addEventViewModel.coordinator = self
         addEventViewController.viewModel = addEventViewModel
         if let modalNavigationController = modalNavigationController {
@@ -36,6 +36,11 @@ final class AddEventCoordinator:Coordinator{
     func didFinsihAddEvent(){
         parentCoordinator?.childDidFinsih(self)
     }
+    
+    func didFinishSaveEvent(){
+        navigationController.dismiss(animated: true, completion: nil)
+     //   parentCoordinator?.childDidFinsih(self)
+  }
     
     func showImagePicker(completion: @escaping(UIImage) -> Void){
         guard let modalNavigationController = modalNavigationController else{
@@ -55,6 +60,8 @@ final class AddEventCoordinator:Coordinator{
         modalNavigationController?.dismiss(animated: true, completion: nil)
     }
      func childDidFinsih(_ childCoordinator:Coordinator){
+        
+        print(CoreDataManager().fetchEvents())
          if let index = childCoordinators.firstIndex(where: { coordinator -> Bool in
              return childCoordinator === coordinator
         }){

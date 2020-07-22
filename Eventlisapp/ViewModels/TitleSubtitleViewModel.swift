@@ -30,9 +30,9 @@ final class TitleSubtitleCellViewModel{
     private(set) var image:UIImage?
    /// callback
     
-    private(set) var onCellUpdate: () -> Void = {}
+    private(set) var onCellUpdate: (() -> Void)?
     
-    init(title:String,subtitle:String,placeholder:String,type:CellType,onCellUpdate: @escaping () -> Void) {
+    init(title:String,subtitle:String,placeholder:String,type:CellType,onCellUpdate: (() -> Void)?) {
         self.title = title
         self.subtitle = subtitle
         self.placeholder = placeholder
@@ -49,11 +49,11 @@ final class TitleSubtitleCellViewModel{
     func update(_ date:Date){
         let dateString = dateFormatter.string(from: date)
         self.subtitle = dateString
-        onCellUpdate()
+        onCellUpdate?()
         //reload cell
     }
     func update(_ image:UIImage){
        self.image = image
-        onCellUpdate()
+        onCellUpdate?()
     }
 }

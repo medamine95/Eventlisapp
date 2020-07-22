@@ -32,6 +32,8 @@ final class EventListCoordinator:Coordinator{
     
     ///anonymus argument
     func childDidFinsih(_ childCoordinator:Coordinator){
+        print(CoreDataManager().fetchEvents().first?.name)
+        
         if let index = childCoordinators.firstIndex(where: { coordinator -> Bool in
             return childCoordinator === coordinator
        }){
