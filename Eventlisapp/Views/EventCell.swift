@@ -12,10 +12,7 @@ import UIKit
 
 final class EventCell:UITableViewCell{
     
-    private let yearLabel = UILabel()
-    private let monthLabel = UILabel()
-    private let weekLabel = UILabel()
-    private let daysLabel = UILabel()
+    private let timeRemainingLabels = [UILabel(),UILabel(),UILabel(),UILabel()]
     private let dateLabel = UILabel()
     
     private let eventNamelabel = UILabel()
@@ -42,11 +39,11 @@ final class EventCell:UITableViewCell{
     private func setupViews(){
         
         // to not get weird layout issues
-        [yearLabel,monthLabel,weekLabel,daysLabel,dateLabel,eventNamelabel,backgroumdImageView,verticalStackView].forEach{
+        (timeRemainingLabels + [dateLabel,eventNamelabel,backgroumdImageView,verticalStackView]).forEach{
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        [yearLabel,monthLabel,weekLabel,daysLabel,dateLabel].forEach {
+        (timeRemainingLabels + [dateLabel]).forEach {
             $0.font = .systemFont(ofSize: 22, weight:.medium)
             $0.textColor = .white
         }
@@ -64,10 +61,9 @@ final class EventCell:UITableViewCell{
          contentView.addSubview(backgroumdImageView)
         contentView.addSubview(verticalStackView)
         contentView.addSubview(eventNamelabel)
-        verticalStackView.addArrangedSubview(yearLabel)
-        verticalStackView.addArrangedSubview(monthLabel)
-        verticalStackView.addArrangedSubview(weekLabel)
-        verticalStackView.addArrangedSubview(daysLabel)
+        timeRemainingLabels.forEach{
+            verticalStackView.addArrangedSubview($0)
+        }
         verticalStackView.addArrangedSubview(UIView())
         verticalStackView.addArrangedSubview(dateLabel)
         }
@@ -87,13 +83,15 @@ final class EventCell:UITableViewCell{
     }
     
     func update(with viewModel:EventCellViewModel) {
-        yearLabel.text = viewModel.yearText
-        monthLabel.text = viewModel.monthText
-        weekLabel.text = viewModel.weekText
-        daysLabel.text = viewModel.dayText
+        /// enumarted gives the currentt number of  the element
+        viewModel.timeRemainingStrings.enumerated().forEach{
+            timeRemainingLabels[$0.offset].text = $0.element
+        }
         dateLabel.text = viewModel.dateText
         eventNamelabel.text = viewModel.eventName
-        backgroumdImageView.image = viewModel.backgroundImage
+        viewModel.loadImage{ image in
+            self.backgroumdImageView.image = image
+        }
   }
     
     

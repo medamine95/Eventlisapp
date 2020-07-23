@@ -14,6 +14,8 @@ final class CoreDataManager {
     
     //Data presestince
     
+    static let shared = CoreDataManager()
+    
     lazy var presistentContainer: NSPersistentContainer = {
         let persistentContainer = NSPersistentContainer(name: "EventsApp")
         persistentContainer.loadPersistentStores{

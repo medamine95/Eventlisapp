@@ -31,6 +31,7 @@
 		FAD3FEF624C86788008008EC /* EventCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3FEF524C86788008008EC /* EventCellViewModel.swift */; };
 		FAD3FEF824C86A86008008EC /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3FEF724C86A86008008EC /* EventCell.swift */; };
 		FAD3FEFA24C86E5B008008EC /* UiViewConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3FEF924C86E5B008008EC /* UiViewConstraintExtension.swift */; };
+		FAD3FEFC24C98F0E008008EC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3FEFB24C98F0E008008EC /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		FAD3FEF524C86788008008EC /* EventCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewModel.swift; sourceTree = "<group>"; };
 		FAD3FEF724C86A86008008EC /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		FAD3FEF924C86E5B008008EC /* UiViewConstraintExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewConstraintExtension.swift; sourceTree = "<group>"; };
+		FAD3FEFB24C98F0E008008EC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				FA1029DD24C1A5C700672DB3 /* Colors.swift */,
 				FA8E29D024C1D18C009CEF21 /* UiViewControllerExtension.swift */,
 				FAD3FEF924C86E5B008008EC /* UiViewConstraintExtension.swift */,
+				FAD3FEFB24C98F0E008008EC /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				FA8E29CB24C1C531009CEF21 /* EventListViewModel.swift in Sources */,
 				FA8E29D524C1E656009CEF21 /* TitleSubtitleViewModel.swift in Sources */,
 				FA804313249A2D2600D85108 /* SceneDelegate.swift in Sources */,
+				FAD3FEFC24C98F0E008008EC /* DateExtension.swift in Sources */,
 				FA8E29CD24C1CD10009CEF21 /* AddEventCoordinator.swift in Sources */,
 				FA804327249A39DB00D85108 /* EventListCoordinator.swift in Sources */,
 				FAD3FEF424C85121008008EC /* EventsCellBuilder.swift in Sources */,
