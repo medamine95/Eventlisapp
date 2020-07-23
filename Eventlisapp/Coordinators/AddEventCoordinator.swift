@@ -69,7 +69,6 @@ final class AddEventCoordinator:Coordinator{
              childCoordinators.remove(at: index)
          }
     }
-    
     deinit {
         print("deinit from addevent coordinator")
     }

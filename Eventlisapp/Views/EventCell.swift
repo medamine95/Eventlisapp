@@ -77,8 +77,8 @@ final class EventCell:UITableViewCell{
         
         backgroumdImageView.heightAnchor.constraint(equalToConstant: 250).isActive = true
         verticalStackView.pinToSuperviewEdges([.top,.right,.bottom],constant: 15)
-        dateLabel.pinToSuperviewEdges([.left,.bottom],constant: 15)
-        eventNamelabel.pinToSuperviewEdges([.left,.bottom],constant: 15)
+        dateLabel.pinToSuperviewEdges([.left],constant: 15)
+        eventNamelabel.pinToSuperviewEdges([.left],constant: 15)
         
     }
     
