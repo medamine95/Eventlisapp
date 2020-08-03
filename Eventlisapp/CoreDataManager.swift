@@ -29,10 +29,22 @@ final class CoreDataManager {
         presistentContainer.viewContext
     }
     
+    func getEvent(_ id:NSManagedObjectID) -> Event?  {
+        do {
+            return try moc.existingObject(with: id) as? Event
+        }catch{
+           print(error)
+        }
+        return nil
+    }
+    
+    
     func saveEvent(name:String,date:Date,image:UIImage){
         let event = Event(context: moc)
         event.setValue(name, forKey: "name")
-        let imageData = image.jpegData(compressionQuality: 1)
+        
+        let resizedImage = image.sameAspectRatio(newHeight: 250)
+        let imageData = resizedImage.jpegData(compressionQuality: 0.5)
         event.setValue(imageData, forKey: "image")
         event.setValue(date, forKey: "date")
         

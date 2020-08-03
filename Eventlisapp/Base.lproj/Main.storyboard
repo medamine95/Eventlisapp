@@ -67,5 +67,40 @@
             </objects>
             <point key="canvasLocation" x="1133" y="73"/>
         </scene>
+        <!--Event Detail View Controller-->
+        <scene sceneID="kkv-HL-KlI">
+            <objects>
+                <viewController storyboardIdentifier="EventDetailViewController" id="cVA-vY-5Pq" customClass="EventDetailViewController" customModule="Eventlisapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJm-2Z-cSV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ow3-lB-6tp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="110" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UuD-w9-PnD" customClass="TimeRemainingStackView" customModule="Eventlisapp" customModuleProvider="target">
+                                <rect key="frame" x="152" y="348" width="110" height="200"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ow3-lB-6tp" secondAttribute="bottom" id="L4F-sD-5yt"/>
+                            <constraint firstItem="UuD-w9-PnD" firstAttribute="centerX" secondItem="OJm-2Z-cSV" secondAttribute="centerX" id="X9E-pp-7Oh"/>
+                            <constraint firstItem="UuD-w9-PnD" firstAttribute="centerY" secondItem="OJm-2Z-cSV" secondAttribute="centerY" id="bbv-Lw-2Qd"/>
+                            <constraint firstItem="Ow3-lB-6tp" firstAttribute="top" secondItem="OJm-2Z-cSV" secondAttribute="top" id="wvp-RU-pAP"/>
+                            <constraint firstAttribute="trailing" secondItem="Ow3-lB-6tp" secondAttribute="trailing" id="yfj-JW-YEl"/>
+                            <constraint firstItem="Ow3-lB-6tp" firstAttribute="leading" secondItem="SxE-a8-fbi" secondAttribute="leading" id="ziW-qp-RVJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SxE-a8-fbi"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Ow3-lB-6tp" id="UTW-gg-Khi"/>
+                        <outlet property="timeRemainingStackView" destination="UuD-w9-PnD" id="yb3-oO-6qn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0H-mK-ZD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="73"/>
+        </scene>
     </scenes>
 </document>
