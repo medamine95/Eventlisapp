@@ -12,7 +12,7 @@ import UIKit
 protocol Coordinator: class {
     var childCoordinators:[Coordinator] {get}
     func start()
-    
+    func childDidFinsih(_ childCoordinator: Coordinator)
 }
 
 final class Appcoordinator:Coordinator{
@@ -35,4 +35,9 @@ final class Appcoordinator:Coordinator{
         
     }
   
+}
+
+extension Coordinator {
+    
+    func childDidFinsih(_ childCoordinator: Coordinator){}
 }

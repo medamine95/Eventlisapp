@@ -38,7 +38,7 @@ final class AddEventCoordinator:Coordinator{
     }
     
     func didFinishSaveEvent(){
-        parentCoordinator?.onSaveEvent()
+        parentCoordinator?.onUpdateEvent()
         navigationController.dismiss(animated: true, completion: nil)
      //   parentCoordinator?.childDidFinsih(self)
   }
@@ -50,16 +50,18 @@ final class AddEventCoordinator:Coordinator{
         self.completion = completion
         let imagePickerCoordinator = ImagePickerCoordinator(navigationController: modalNavigationController)
         /// very Important pointing  to parent coordinator to launch actions
+        imagePickerCoordinator.onFinsihPicking = {
+            image in
+            self.completion(image)
+            self.modalNavigationController?.dismiss(animated: true, completion: nil)
+        }
         imagePickerCoordinator.parentCoordinator = self
         childCoordinators.append(imagePickerCoordinator)
         imagePickerCoordinator.start()
         print("show image picker")
     }
     
-    func didFinishPicking(_ image:UIImage){
-        completion(image)
-        modalNavigationController?.dismiss(animated: true, completion: nil)
-    }
+   
      func childDidFinsih(_ childCoordinator:Coordinator){
         
         print(CoreDataManager().fetchEvents())

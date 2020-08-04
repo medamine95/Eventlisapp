@@ -102,5 +102,35 @@
             </objects>
             <point key="canvasLocation" x="1912" y="73"/>
         </scene>
+        <!--Edit Event View Controller-->
+        <scene sceneID="bOh-yN-qQO">
+            <objects>
+                <viewController storyboardIdentifier="EditEventViewController" id="vM1-v8-JTr" customClass="EditEventViewController" customModule="Eventlisapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fek-ak-47L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FmX-Ri-k1V">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FmX-Ri-k1V" firstAttribute="leading" secondItem="fek-ak-47L" secondAttribute="leading" id="6yl-o3-ynZ"/>
+                            <constraint firstAttribute="bottom" secondItem="FmX-Ri-k1V" secondAttribute="bottom" id="8Kt-8f-IHm"/>
+                            <constraint firstAttribute="trailing" secondItem="FmX-Ri-k1V" secondAttribute="trailing" id="dKL-H1-yWW"/>
+                            <constraint firstItem="FmX-Ri-k1V" firstAttribute="top" secondItem="fek-ak-47L" secondAttribute="top" id="fMJ-2x-Ldy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GmE-zF-AkP"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="FmX-Ri-k1V" id="TfI-eD-KbC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AlG-df-2Gt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2720" y="73"/>
+        </scene>
     </scenes>
 </document>

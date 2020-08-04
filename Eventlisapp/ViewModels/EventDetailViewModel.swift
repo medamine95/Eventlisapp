@@ -35,12 +35,21 @@ final class EventDetailViewModel{
     }
 
     func viewDidLoad(){
+        reload()
+    }
+    
+    func reload(){
         event = coreDataManager.getEvent(eventID)
         onUpdate()
     }
     
     func viewDidDisappear(){
         coordinator?.didFinsih()
+    }
+    
+    @objc func editButtonTapped(){
+        guard let event = event else {return}
+        coordinator?.onEditEvent(event: event)
     }
 }
 
